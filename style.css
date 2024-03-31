@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.image-background {
+    border: 1px solid black;
+    flex: 2;
+}
+
+.image-background img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content {
+    border: 1px solid black;
+    flex: 3;
+}
