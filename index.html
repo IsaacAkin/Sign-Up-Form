@@ -25,36 +25,38 @@
             this in your life to help you realise your deepest dreams. Sign up
             now to get started.
           </p>
-          <p>You know you want to.</p>
+          <p>You <em>know</em> you want to.</p>
         </div>
-        <div class="user-info">
-          <form action="#">
-            <h3>Lets do this!</h3>
-
-            <label for="first_name">First Name</label>
-            <input type="text" name="first_name" id="first_name" />
-
+        <form id="sign-up" action="#">
+          <h3>Lets do this!</h3>
+          <div class="user_name boxes">
+            <label for="first_name"
+              >First Name <span aria-label="required">*</span></label
+            >
+            <input type="text" name="first_name" id="first_name" required />
             <label for="last_name">Last Name</label>
-            <input type="text" name="last_name" id="last_name" />
-
+            <input type="text" name="last_name" id="last_name" required />
+          </div>
+          <div class="contact_info boxes">
             <label for="mail">Email</label>
-            <input type="email" name="mail" id="mail" />
-
+            <input type="email" name="mail" id="mail" required />
             <label for="mobile">Phone Number</label>
-            <input type="number" name="mobile" id="mobile" />
-
+            <input type="tel" name="mobile" id="mobile" />
+          </div>
+          <div class="security boxes">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" />
-
+            <input type="password" name="password" id="password" required />
             <label for="confirm_password">Confirm Password</label>
             <input
               type="password"
               name="confirm_password"
               id="confirm_password"
+              required
             />
-
-            <button type="submit">Create Account</button>
-          </form>
+          </div>
+        </form>
+        <div class="buttons-and-links">
+          <button form="sign-up" type="submit">Create Account</button>
           <p>Already have an account? <a href="#">Log in</a></p>
         </div>
       </div>
