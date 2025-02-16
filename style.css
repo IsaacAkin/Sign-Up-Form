@@ -1,27 +1,106 @@
+:root {
+    --left: 40px;
+}
+
 body {
     margin: 0;
     padding: 0;
-    /* height: 100vh; */
+    overflow: hidden;
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .wrapper {
     display: flex;
-    height: 100vh;
 }
 
 .image-background {
-    border: 1px solid black;
-    flex: 2;
+    height: 100vh;
 }
 
-.image-background img {
+[alt="a nice background"] {
+    object-fit: contain;
     height: 100%;
-    width: 100%;
-    object-fit: cover;
+    width: auto;
 }
 
 .content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.hero {
     border: 1px solid black;
-    flex: 3;
+    /* position: relative; */
+    /* top: 100px; */
+    /* left: var(--left); */
+    margin-left: var(--left);
+    width: 56%;
+    font-size: 1.3rem;
+}
+
+form {
+    border: 1px solid black;
+    width: 100%;
+    height: 30%;
+
+    /* position: relative; */
+    /* left: var(--left); */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+form>h3 {
+    margin-left: var(--left);
+}
+
+form>div {
+    margin-left: var(--left);
+}
+
+input {
+    width: 20%;
+    height: 100%;
+}
+
+.boxes {
+    border: 1px solid black;
+}
+
+.buttons-and-links {
+    /* border: 1px solid black; */
+    /* position: relative; */
+    /* left: var(--left); */
+    margin-left: var(--left);
+    width: fit-content;
+}
+
+button {
+    width: 11rem;
+    height: 2.7rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #A593E0;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: white;
+    color: #A593E0;
+    border: 3px solid #A593E0;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+    font-weight: bold;
 }
