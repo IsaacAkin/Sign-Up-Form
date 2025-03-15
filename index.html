@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
     <title>Sign-up Form</title>
   </head>
   <body>
     <div class="wrapper">
-      <div class="image-background">
-        <!-- <div class="logo">
+      <div class="image-container">
+        <div>
           <img src="./img/odin-lined.png" alt="the odin project logo" />
-        </div> -->
-        <!-- <div>hello world</div> -->
+          <p>Olympus</p>
+        </div>
+        <span>Image by <em>Samuel Ferrara</em> on Unsplashed</span>
         <img
           src="./img/samuel-ferrara-dKJXkKCF2D8-unsplash.jpg"
           alt="a nice background"
@@ -29,30 +31,73 @@
         </div>
         <form id="sign-up" action="#">
           <h3>Lets do this!</h3>
+          <p>
+            Required fields are labeled with
+            <span aria-label="required">*</span>
+          </p>
           <div class="user_name boxes">
-            <label for="first_name"
-              >First Name <span aria-label="required">*</span></label
-            >
-            <input type="text" name="first_name" id="first_name" required />
-            <label for="last_name">Last Name</label>
-            <input type="text" name="last_name" id="last_name" required />
+            <div>
+              <label for="first_name"
+                >First Name<span aria-label="required">*</span></label
+              >
+              <input
+                type="text"
+                name="first_name"
+                id="first_name"
+                autocomplete="off"
+                required
+              />
+              <span></span>
+            </div>
+            <div>
+              <label for="last_name"
+                >Last Name<span aria-label="required">*</span></label
+              >
+              <input
+                type="text"
+                name="last_name"
+                id="last_name"
+                autocomplete="off"
+                required
+              />
+              <span></span>
+            </div>
           </div>
           <div class="contact_info boxes">
-            <label for="mail">Email</label>
-            <input type="email" name="mail" id="mail" required />
-            <label for="mobile">Phone Number</label>
-            <input type="tel" name="mobile" id="mobile" />
+            <div>
+              <label for="mail">Email</label>
+              <input type="email" name="mail" id="mail" autocomplete="off" />
+              <span></span>
+            </div>
+            <div>
+              <label for="mobile">Phone Number</label>
+              <input type="tel" name="mobile" id="mobile" autocomplete="off" />
+              <span></span>
+            </div>
           </div>
           <div class="security boxes">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required />
-            <label for="confirm_password">Confirm Password</label>
-            <input
-              type="password"
-              name="confirm_password"
-              id="confirm_password"
-              required
-            />
+            <div>
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                autocomplete="off"
+                required
+              />
+              <span></span>
+            </div>
+            <div>
+              <label for="confirm_password">Confirm Password</label>
+              <input
+                type="password"
+                name="confirm_password"
+                id="confirm_password"
+                autocomplete="off"
+                required
+              />
+              <span class="error_message"></span>
+            </div>
           </div>
         </form>
         <div class="buttons-and-links">
