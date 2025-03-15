@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 :root {
     --left: 40px;
 }
@@ -5,19 +7,55 @@
 body {
     margin: 0;
     padding: 0;
+    color: #eee;
+    background-color: #282c37;
     overflow: hidden;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Fredoka", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .wrapper {
     display: flex;
 }
 
-.image-background {
+.image-container {
     height: 100vh;
+    position: relative;
 }
 
-[alt="a nice background"] {
+.image-container>div {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    opacity: 0.4;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container>div>img {
+    height: 100%;
+}
+
+.image-container>div>p {
+    color: white;
+    font-family: "Permanent Marker", sans-serif;
+    font-weight: bolder;
+    font-size: 70px;
+}
+
+.image-container>span {
+    position: absolute;
+    opacity: 0.25;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    top: 97%;
+    left: 40%;
+}
+
+img[alt="a nice background"] {
     object-fit: contain;
     height: 100%;
     width: auto;
@@ -27,29 +65,21 @@ body {
     flex: 2;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     justify-content: center;
     gap: 2rem;
     position: relative;
 }
 
 .hero {
-    border: 1px solid black;
-    /* position: relative; */
-    /* top: 100px; */
-    /* left: var(--left); */
     margin-left: var(--left);
     width: 56%;
     font-size: 1.3rem;
+    text-wrap: wrap;
 }
 
 form {
-    border: 1px solid black;
+    /* border: 1px solid white; */
     width: 100%;
-    height: 30%;
-
-    /* position: relative; */
-    /* left: var(--left); */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -58,25 +88,74 @@ form {
 
 form>h3 {
     margin-left: var(--left);
+    margin-bottom: 0;
+}
+
+form>p {
+    margin-left: var(--left);
+    margin-top: 0;
 }
 
 form>div {
+    width: 900px;
     margin-left: var(--left);
+    margin-bottom: 20px;
+}
+
+.user_name,
+.contact_info,
+.security {
+    display: flex;
+    gap: 5rem;
+}
+
+.user_name>div>label+input,
+.contact_info>div>label+input,
+.security>div>label+input {
+    display: block;
 }
 
 input {
-    width: 20%;
-    height: 100%;
+    width: 300px;
+    padding: 5px;
+    height: 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #566270;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 4px solid #A593E0;
 }
 
-.boxes {
-    border: 1px solid black;
+input[type="email"]:invalid {
+    border-bottom: 4px solid red;
+}
+
+.error_message {
+    font-size: 1rem;
+    color: red;
+}
+
+input[type="email"]:invalid+span::after {
+    font-size: 1rem;
+    color: red;
+    content: "*Please enter a valid email address";
+}
+
+input:valid::after {
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 4px solid #75D701;
+}
+
+input:hover,
+input:focus {
+    background-color: #566295;
 }
 
 .buttons-and-links {
-    /* border: 1px solid black; */
-    /* position: relative; */
-    /* left: var(--left); */
     margin-left: var(--left);
     width: fit-content;
 }
@@ -101,6 +180,10 @@ button:hover {
 
 a {
     text-decoration: none;
-    color: purple;
+    color: #A593E0;
     font-weight: bold;
+}
+
+a:hover {
+    color: white;
 }
